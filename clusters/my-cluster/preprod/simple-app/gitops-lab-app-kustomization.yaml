@@ -12,6 +12,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: gitops-lab-app
-  targetNamespace: default
+  targetNamespace: simple-app
   timeout: 3m0s
   wait: true
