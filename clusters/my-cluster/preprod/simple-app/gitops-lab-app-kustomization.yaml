@@ -3,7 +3,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: gitops-lab-app
-  namespace: flux-system
+  namespace: simple-app
 spec:
   interval: 30m0s
   path: ./kustomize
