@@ -6,7 +6,7 @@ metadata:
   namespace: simple-app
 spec:
   interval: 30m0s
-  path: ./kustomize
+  path: ./kustomize/preprod/simple-app
   prune: true
   retryInterval: 2m0s
   sourceRef:
