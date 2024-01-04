@@ -1,0 +1,25 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: reloader-repo
+  namespace: my-system
+spec:
+  interval: 1m0s
+  url: https://stakater.github.io/stakater-charts
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: reloader
+  namespace: my-system
+spec:
+  chart:
+    spec:
+      chart: reloader
+      version: 1.0.60
+      sourceRef:
+        kind: HelmRepository
+        name: reloader-repo
+        namespace: my-system
+  interval: 1m0s
